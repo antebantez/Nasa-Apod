@@ -1,4 +1,6 @@
-require("dotenv").config()
+#!/usr/bin/env node
+
+require("dotenv").config({path: '/home/pi/Nasa-Apod/.env'})
 
 const axios = require("axios")
 const Dropbox = require("dropbox")
