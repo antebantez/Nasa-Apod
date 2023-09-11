@@ -13,8 +13,7 @@ const getData = () => {
     axios
         .get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
         .then((res) => {
-            if (res.media_type === "image") {
-                console.log(res.data)
+            if (res.data.media_type === "image") {
                 const hdURL = res.data.hdurl
                 const title = res.data.title
                 const dropboxPath = `/${encodeURIComponent(title)}.jpg`
